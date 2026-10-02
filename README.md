@@ -14,12 +14,11 @@ The original assignment and the project report are included in the repo (both in
 
 ## Repository contents
 
-| File | Description |
-| --- | --- |
-| [`interprete_funzionale.ml`](interprete_funzionale.ml) | The whole interpreter (environment, abstract syntax, type checker, semantics) and its test suite |
-| [`specifiche_interprete.pdf`](specifiche_interprete.pdf) | Assignment text |
-| [`relazione_interprete.pdf`](relazione_interprete.pdf) | Report describing the main design choices |
-| [`LICENSE`](LICENSE) | GNU GPL v3 |
+| File                                                     | Description                                                                                      |
+| ---                                                      | ---                                                                                              |
+| [`interprete_funzionale.ml`](interprete_funzionale.ml)   | The whole interpreter (environment, abstract syntax, type checker, semantics) and its test suite |
+| [`specifiche_interprete.pdf`](specifiche_interprete.pdf) | Assignment text                                                                                  |
+| [`relazione_interprete.pdf`](relazione_interprete.pdf)   | Report describing the main design choices                                                        |
 
 
 
@@ -154,20 +153,20 @@ To handle this, such occurrences are first renamed to a reserved placeholder ide
 
 The bottom of [`interprete_funzionale.ml`](interprete_funzionale.ml) contains 15 tests, each followed by its expected result:
 
-| Test | What it covers | Expected result |
-| --- | --- | --- |
-| 1 | Recursive factorial with `Rec` and `Fun` | `Int 720` |
-| 2 | Tuple of constants | `TupVal [Int 2; Int 3]` |
-| 3 | `Pipe` of two functions, returned as a closure | `Funval (UFun ("x", Sum (Eint 1, Prod (Eint 2, Den "x"))), <fun>)` |
-| 4 | Applying a `Pipe`: `(2 * 3) + 1` | `Int 7` |
-| 5 | Tuple containing an identifier | `TupVal [Int 10; Int 33]` |
-| 6 | `ManyTimes (10, x - 1)` applied to 100 | `Int 90` |
-| 7 | `Pipe` of functions with different parameter names | `Int 10` |
-| 8 | `Pipe` where a function body shadows its own parameter with `Let` | `Int 1` |
-| 9 | Name clash between a free variable and the pipe parameter | `Int 111` |
-| 10 | `Pipe` returning a closure that uses the `__x` placeholder | `Funval (UFun ("w", Sum (Den "__x", Den "x")), <fun>)` |
-| 11 | `Pipe` containing a function referred to by name | `Int 33` |
-| 12 | `Pipe` whose function calls a closure with a clashing name | `Int 33` |
-| 13 | Static scoping: a later `Let` doesn't affect a closure | `Int 13` |
-| 14 | Reserved `__x` used as a parameter | `Failure "__x not allowed as ide"` |
-| 15 | Reserved `__x` used as a free variable | `Failure "__x not allowed as ide"` |
+| Test | What it covers                                                    | Expected result                                                    |
+| ---  | ---                                                               | ---                                                                |
+| 1    | Recursive factorial with `Rec` and `Fun`                          | `Int 720`                                                          |
+| 2    | Tuple of constants                                                | `TupVal [Int 2; Int 3]`                                            |
+| 3    | `Pipe` of two functions, returned as a closure                    | `Funval (UFun ("x", Sum (Eint 1, Prod (Eint 2, Den "x"))), <fun>)` |
+| 4    | Applying a `Pipe`: `(2 * 3) + 1`                                  | `Int 7`                                                            |
+| 5    | Tuple containing an identifier                                    | `TupVal [Int 10; Int 33]`                                          |
+| 6    | `ManyTimes (10, x - 1)` applied to 100                            | `Int 90`                                                           |
+| 7    | `Pipe` of functions with different parameter names                | `Int 10`                                                           |
+| 8    | `Pipe` where a function body shadows its own parameter with `Let` | `Int 1`                                                            |
+| 9    | Name clash between a free variable and the pipe parameter         | `Int 111`                                                          |
+| 10   | `Pipe` returning a closure that uses the `__x` placeholder        | `Funval (UFun ("w", Sum (Den "__x", Den "x")), <fun>)`             |
+| 11   | `Pipe` containing a function referred to by name                  | `Int 33`                                                           |
+| 12   | `Pipe` whose function calls a closure with a clashing name        | `Int 33`                                                           |
+| 13   | Static scoping: a later `Let` doesn't affect a closure            | `Int 13`                                                           |
+| 14   | Reserved `__x` used as a parameter                                | `Failure "__x not allowed as ide"`                                 |
+| 15   | Reserved `__x` used as a free variable                            | `Failure "__x not allowed as ide"`                                 |
