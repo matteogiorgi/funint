@@ -1,6 +1,6 @@
 # FunInt
 
-An interpreter, written in OCaml, for a small didactic functional language with
+This repo contains an interpreter, written in OCaml, for a small didactic functional language with
 [static scoping](https://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scope_vs._dynamic_scope)
 and [dynamic type checking](https://en.wikipedia.org/wiki/Type_system#Dynamic_type_checking_and_runtime_type_information).
 
@@ -191,7 +191,3 @@ followed by its expected result:
 | 13 | Static scoping: a later `Let` doesn't affect a closure | `Int 13` |
 | 14 | Reserved `__x` used as a parameter | `Failure "__x not allowed as ide"` |
 | 15 | Reserved `__x` used as a free variable | `Failure "__x not allowed as ide"` |
-
-## License
-
-Released under the [GNU General Public License v3](LICENSE).
