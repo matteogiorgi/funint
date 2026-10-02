@@ -1,4 +1,4 @@
-# FunInt
+# Functional language interpreter
 
 This repo contains an interpreter, written in OCaml, for a small didactic functional language with
 [static scoping](https://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scope_vs._dynamic_scope)
