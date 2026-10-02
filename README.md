@@ -2,23 +2,13 @@
 
 This repo contains an interpreter, written in OCaml, for a small didactic functional language with [static scoping](https://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scope_vs._dynamic_scope) and [dynamic type checking](https://en.wikipedia.org/wiki/Type_system#Dynamic_type_checking_and_runtime_type_information).
 
-This was the second project for the *Programmazione II* (Programming Languages) course, academic year 2016/17. The assignment was to extend the functional language presented in class with **tuples of expressions** and with two ways of **combining functions**: pipelines (`Pipe`) and iterated application (`ManyTimes`).
-
-The original assignment and the project report are included in the repo (both in Italian):
-
-- [`specifiche_interprete.pdf`](specifiche_interprete.pdf): project specification
-- [`relazione_interprete.pdf`](relazione_interprete.pdf): project report
-
-
-
+This was the second project for the *Programmazione II* (Programming Languages) course; the assignment was to extend the functional language presented in class with **tuples of expressions** and with two ways of **combining functions**: pipelines (`Pipe`) and iterated application (`ManyTimes`).
 
 ## Repository contents
 
-| File                                                     | Description                                                                                      |
-| ---                                                      | ---                                                                                              |
-| [`interprete_funzionale.ml`](interprete_funzionale.ml)   | The whole interpreter (environment, abstract syntax, type checker, semantics) and its test suite |
-| [`specifiche_interprete.pdf`](specifiche_interprete.pdf) | Assignment text                                                                                  |
-| [`relazione_interprete.pdf`](relazione_interprete.pdf)   | Report describing the main design choices                                                        |
+- [`interprete_funzionale.ml`](https://github.com/matteogiorgi/funint/blob/master/interprete_funzionale.ml): the whole interpreter (environment, abstract syntax, type checker, semantics) and its test suite
+- [`specifiche_interprete.pdf`](specifiche_interprete.pdf): the original assignment text (in Italian)
+- [`relazione_interprete.pdf`](relazione_interprete.pdf): the project report, describing the main design choices (in Italian)
 
 
 
